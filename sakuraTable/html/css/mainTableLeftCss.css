@@ -1,0 +1,301 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+}
+
+/* 最左边菜单栏 */
+.sectionLeft {
+    -moz-user-select: none;
+    -o-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: solid red 0px;
+    width: 300px;
+    position: fixed;
+    top: 0;
+    left: -300px;
+    /* overflow: visible; */
+}
+
+.sectionLeft {
+    background-color: rgba(228, 133, 196, 0.5);
+    min-height: 700px;
+    z-index: -1;
+}
+
+/* 头像框 */
+.headBigBox {
+    position: relative;
+    left: 25%;
+    top: 6%;
+    border: solid red 0px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.headPictureBox:hover {
+    box-shadow: 5px 5px 5px rgba(249, 150, 216, 0.6);
+}
+
+.headPictureBox {
+    background-color: pink;
+    border: solid red 0px;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+}
+
+.headPicture {
+    width: 200px;
+    height: 200px;
+}
+
+/* 划过头像出来的大图 */
+.bigHPBox {
+    display: none;
+    position: relative;
+    left: 18%;
+    top: -75%;
+    z-index: -1;
+}
+
+.bigHPPicture {
+    border: solid red 0px;
+    max-width: 1080px;
+    width: 100px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* display: none; */
+}
+
+/* 上面的用户信息 */
+.infoBAC {
+    display: block;
+    /* overflow-x: auto; */
+}
+
+.infoBAC {
+    display: none;
+}
+
+/* 下面几个的hover事件 */
+.saveUserInfo:hover,
+.hideBackGround:hover,
+.closeUp:hover {
+    background-color: rgb(214, 135, 165);
+}
+
+/* 保存 */
+.saveUserInfo {
+    z-index: 2;
+    position: relative;
+    top: 730px;
+    left: 30px;
+    width: 90px;
+    height: 45px;
+    border: solid rgb(240, 197, 214) 0px;
+    background-color: rgb(240, 197, 214);
+    border-radius: 20%;
+}
+
+.saveUserInfo p {
+    position: relative;
+    top: 20%;
+    left: 35%;
+    color: #ff90cd;
+    z-index: 3;
+}
+
+/* 背景调整 */
+.hideBackGround {
+    z-index: 2;
+    position: relative;
+    top: 685px;
+    left: 150px;
+    width: 120px;
+    height: 45px;
+    border: solid rgb(240, 197, 214) 0px;
+    background-color: rgb(240, 197, 214);
+    border-radius: 20%;
+}
+
+.hideBackGround p {
+    position: relative;
+    top: 22%;
+    left: 27%;
+    color: #ff90cd;
+    z-index: 3;
+}
+
+/* 收起 */
+.closeUp {
+    z-index: 2;
+    position: relative;
+    top: 640px;
+    left: 300px;
+    width: 90px;
+    height: 45px;
+    border: solid rgb(240, 197, 214) 0px;
+    background-color: rgb(240, 197, 214);
+    border-radius: 20%;
+}
+
+.closeUp p {
+    position: relative;
+    top: 20%;
+    left: 35%;
+    color: #ff90cd;
+    z-index: 3;
+}
+
+/* 昵称 */
+.nikeNameBox {
+    border: solid #FFD5D5 0px;
+    background-color: rgba(248, 171, 171, 0.671);
+    border-radius: 25%;
+    position: relative;
+    left: 20%;
+    top: 8%;
+    width: 200px;
+    height: 50px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.nikeName {
+    font-size: 30px;
+    font-family: STLiti;
+    color: #FFAAAA;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+/* 菜单 */
+.menuTable {
+    position: relative;
+    left: 0%;
+    top: 12%;
+}
+
+.menuTable ul {
+    list-style-type: none;
+    border: solid 0px black;
+    width: 300px;
+}
+
+.menuTable ul li {
+    text-align: center;
+    border: solid 0px #865174;
+    background-color: rgba(143, 88, 126, 0.671);
+    margin-top: 15px;
+    height: 42px;
+    width: 300px;
+    position: relative;
+}
+
+.menuTable ul li:hover {
+    background-color: rgba(187, 112, 149, 0.9);
+    box-shadow: 0px 5px 5px rgba(249, 150, 216, 0.6)
+}
+
+.menuTable ul li p {
+    padding: 3%;
+    color: #F4C8C8;
+    position: relative;
+}
+
+.menu1{
+    position: relative;
+    left: -100px;
+}
+
+.menu2{
+    position: relative;
+    left: 100px;
+}
+
+/* 最低部文字 */
+.pliceText {
+    width: 300px;
+    height: 40px;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+}
+
+.pliceText p {
+    font-size: 12px;
+}
+
+.sakuraXZBox {
+    border: solid red 0px;
+    position: fixed;
+    top: 40%;
+    margin-left: 300px;
+}
+
+.sakuraXZ {
+    width: 90px;
+}
+
+
+.sakuraXZ {
+    -webkit-animation: rotate 5s linear infinite;
+    -moz-animation: rotate 5s linear infinite;
+    -o-animation: rotate 5s linear infinite;
+    animation: rotate 5s linear infinite;
+}
+
+@-webkit-keyframes rotate {
+    from {
+        -webkit-transform: rotate(0deg)
+    }
+
+    to {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@-moz-keyframes rotate {
+    from {
+        -moz-transform: rotate(0deg)
+    }
+
+    to {
+        -moz-transform: rotate(359deg)
+    }
+}
+
+@-o-keyframes rotate {
+    from {
+        -o-transform: rotate(0deg)
+    }
+
+    to {
+        -o-transform: rotate(359deg)
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg)
+    }
+
+    to {
+        transform: rotate(359deg)
+    }
+}
+
+.menuTable{
+    opacity:0%;
+}

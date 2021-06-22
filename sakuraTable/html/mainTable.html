@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>首页测试</title>
+</head>
+<style>
+  /* @import url(mainTableCss.css); */
+</style>
+<link rel="stylesheet" type="text/css" href="css\mainTableLeftCss.css" />
+<link rel="stylesheet" type="text/css" href="css\sakuraSnowCss.css" />
+
+
+<body class="allThings">
+
+  <!-- 背景  -->
+  <div id="jsi-cherry-container" class="container"></div>
+
+  <!-- 左边菜单栏 -->
+  <div class="sectionLeft" id="tree">
+
+    <!-- 头像 -->
+    <div class="headBigBox">
+      <div class="headPictureBox">
+        <img src="headPictures/sakura.jpg" class="headPicture" />
+      </div>
+      <!-- 头像鼠标划过弹出的框 -->
+      <div class="bigHPBox" id="bigHPBox">
+        <img src="headPictures/sakura.jpg" class="bigHPPicture" />
+        <section class="infoBAC">
+          <div class="saveUserInfo">
+            <p>保存</p>
+          </div>
+          <div class="hideBackGround">
+            <p>纯色背景</p>
+          </div>
+          <div class="closeUp">
+            <p>收起</p>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- 昵称 -->
+    <div class="nikeNameBox">
+      <p class="nikeName" id="nikeName">sakura</p>
+    </div>
+    <!-- 菜单 -->
+    <div class="menuTable">
+      <ul>
+        <li class="menu1">
+          <div>
+            <p>首页</p>
+          </div>
+        </li>
+        <li class="menu2">
+          <div>
+            <p>个人中心</p>
+          </div>
+        </li>
+        <li class="menu1">
+          <div>
+            <p>购物中心</p>
+          </div>
+        </li>
+        <li class="menu2">
+          <div>
+            <p>推荐</p>
+          </div>
+        </li>
+        <li class="menu1">
+          <div>
+            <p>投食</p>
+          </div>
+        </li>
+        <li class="menu2">
+          <div>
+            <p>加入我们</p>
+          </div>
+        </li>
+        <li class="menu1">
+          <div>
+            <p>关于我们</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <!-- 预留文本框 -->
+    <div class="pliceText" id="pliceText">
+      <p>嘤嘤怪嘤嘤12345123456789号</p>
+      <p>嘤SAK嘤12345678号-98</p>
+    </div>
+    <div class="sakuraXZBox">
+      <img src="headPictures/sakura.png" class="sakuraXZ" />
+    </div>
+  </div>
+
+
+  <div class="sectionTop">
+
+  </div>
+
+  <div class="sectionRight">
+
+  </div>
+
+  <div class="sectionBottom">
+
+  </div>
+</body>
+<script type="text/javascript" src="js/jc/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script type="text/javascript" src="js/mainTableLeftjs.js"></script>
+<script type="text/javascript" src="js/sakuraSnowJs.js"></script>
+<script>
+  var nikeName = new Vue({
+    el: '.nikeName',
+    data: {
+      nikeName: 'sakura'
+    }
+  });
+
+  var headPicture = new Vue({
+    el: '.headPicture',
+    data: {
+      headPicture: 'headPictures/miku.png'
+    }
+  });
+
+</script>
+
+</html>
