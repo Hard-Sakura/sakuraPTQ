@@ -214,12 +214,12 @@ body {
     position: relative;
 }
 
-.menu1{
+.menu1 {
     position: relative;
     left: -100px;
 }
 
-.menu2{
+.menu2 {
     position: relative;
     left: 100px;
 }
@@ -296,6 +296,26 @@ body {
     }
 }
 
-.menuTable{
-    opacity:0%;
+.menuTable {
+    opacity: 0%;
+}
+
+.menu1On {
+    transform: translate(100px,0px);
+	transition: all 0.3s;
+}
+
+.menu1OFF {
+    left:"-100px";
+	transition: all 0s;
+}
+
+.menu2On {
+    transform: translate(-100px,0px);
+	transition: all 0.3s;
+}
+
+.menu2OFF {
+    left:"100px";
+	transition: all 0s;
 }

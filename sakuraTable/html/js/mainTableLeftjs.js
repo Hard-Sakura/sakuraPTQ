@@ -1,5 +1,3 @@
-
-
 $(document).ready(function () {
     //菜单特效
     $(".menuTable ul li").on({
@@ -23,7 +21,7 @@ $(document).ready(function () {
     //     }
     // });
 
-    // 
+    // 头像框点击
     $(".headPictureBox").click(function () {
         var dis = $(".bigHPBox").css("display");
         if (dis == "none") {
@@ -124,19 +122,22 @@ function autodivheight() { //函数：获取尺寸  
 window.onresize = autodivheight;  //浏览器窗口发生变化时同时调用
 
 // 菜单显示隐藏
-$(".sakuraXZ").click(function(){
+$(".sakuraXZ").click(function () {
     var dis = $(".menuTable").css("opacity");
-    if(dis == "0"){
-        $(".sectionLeft").stop().animate({ left: "0px" },1000,function(){
-            $(".menu1").stop().animate({ left: "0px" },300);
-            $(".menu2").stop().animate({ left: "0px" },300);
-            $(".menuTable").stop().animate({ opacity: 1 },300);
+    if (dis == "0") {
+        $(".sectionLeft").stop().animate({ left: "0px" }, 1000, function () {
+            // $(".menu1").stop().animate({ left: "0px" }, 300);
+            $(".menu1").addClass("menu1On");
+            $(".menu2").addClass("menu2On");
+            $(".menuTable").stop().animate({ opacity: 1 }, 300);
         });
-    }else{
-        $(".sectionLeft").stop().animate({ left: "-300px" },1000,function(){
-            $(".menuTable").stop().animate({ opacity: 0 },0);
-            $(".menu1").stop().animate({ left: "-100px" },0);
-            $(".menu2").stop().animate({ left: "100px" },0);
+    } else {
+        $(".sectionLeft").stop().animate({ left: "-300px" }, 1000, function () {
+            $(".menu1").removeClass("menu1On");
+            $(".menu2").removeClass("menu2On");
+            $(".menuTable").stop().animate({ opacity: 0 }, 0);
+            $(".menu1").stop().animate({ left: "-100px" }, 0);
+            $(".menu2").stop().animate({ left: "100px" }, 0);
         });
     }
 });
