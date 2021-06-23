@@ -25,8 +25,10 @@ $(document).ready(function () {
     $(".headPictureBox").click(function () {
         var dis = $(".bigHPBox").css("display");
         if (dis == "none") {
+            $(".sakuraXZBox").hide();
             $(".bigHPBox").show();
             $(".headBigBox").stop().animate({ top: "3%" }, 500, function () {
+                $(".bigHPBox").addClass("rotate360");
                 $(".bigHPBox").stop().animate({ left: "225px" }, 200, function () {
                     $(".bigHPPicture").stop().animate({ width: "1080px" }, 2000, function () {
                         $(".infoBAC").show();
@@ -36,9 +38,11 @@ $(document).ready(function () {
         } else {
             $(".infoBAC").hide();
             $(".bigHPPicture").stop().animate({ width: "100px" }, 1000, function () {
+                $(".bigHPBox").removeClass("rotate360");
                 $(".bigHPBox").stop().animate({ left: "19%" }, 200, function () {
                     $(".headBigBox").stop().animate({ top: "5%" }, 100, function () {
                         $(".bigHPBox").hide();
+                        $(".sakuraXZBox").show();
                     });
                 });
             });
@@ -48,6 +52,7 @@ $(document).ready(function () {
     // 昵称点击事件
     $(".nikeNameBox").click(function () {
         $(".bigHPBox").show();
+        $(".sakuraXZBox").hide();
         $(".headBigBox").stop().animate({ top: "3%" }, 500, function () {
             $(".bigHPBox").stop().animate({ left: "225px" }, 200, function () {
                 $(".bigHPPicture").stop().animate({ width: "1080px" }, 2000, function () {
@@ -64,6 +69,7 @@ $(document).ready(function () {
             $(".bigHPBox").stop().animate({ left: "19%" }, 200, function () {
                 $(".headBigBox").stop().animate({ top: "5%" }, 100, function () {
                     $(".bigHPBox").hide();
+                    $(".sakuraXZBox").show();
                 });
             });
         });

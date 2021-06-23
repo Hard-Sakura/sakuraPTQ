@@ -75,15 +75,11 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
+    z-index: -1;
     /* display: none; */
 }
 
 /* 上面的用户信息 */
-.infoBAC {
-    display: block;
-    /* overflow-x: auto; */
-}
-
 .infoBAC {
     display: none;
 }
@@ -97,7 +93,7 @@ body {
 
 /* 保存 */
 .saveUserInfo {
-    z-index: 2;
+    z-index: 1;
     position: relative;
     top: 730px;
     left: 30px;
@@ -118,7 +114,7 @@ body {
 
 /* 背景调整 */
 .hideBackGround {
-    z-index: 2;
+    z-index: 1;
     position: relative;
     top: 685px;
     left: 150px;
@@ -139,7 +135,7 @@ body {
 
 /* 收起 */
 .closeUp {
-    z-index: 2;
+    z-index: 1;
     position: relative;
     top: 640px;
     left: 300px;
@@ -157,6 +153,51 @@ body {
     color: #ff90cd;
     z-index: 3;
 }
+
+/* 用户信息 */
+.userInfoBox{
+    z-index: 2;
+    position: absolute;
+    top: 200px;
+    left: 400px;
+}
+
+.userInfoTitle{
+    position: relative;
+    top: -50px;
+    font-size: 30px;
+    left: 50px;
+}
+
+.userInfoUl{
+    list-style: none;
+}
+.userInfoUl li{
+    border: solid red 1px;
+    width: 380px;
+    margin-top: 10px;
+}
+.userInfoUl li b{
+    font-size: 25px;
+}
+.userInfoUl li input{
+    height: 28px;
+    width: 200px;
+    font-size: 25px;
+    position: relative;
+    top: 0px;
+    left: 5px;
+}
+.userInfoUl li:nth-child(2),
+.userInfoUl li:nth-child(3){
+    position: relative;
+}
+
+
+
+
+
+
 
 /* 昵称 */
 .nikeNameBox {
@@ -301,21 +342,26 @@ body {
 }
 
 .menu1On {
-    transform: translate(100px,0px);
-	transition: all 0.3s;
+    transform: translate(100px, 0px);
+    transition: all 0.3s;
 }
 
 .menu1OFF {
-    left:"-100px";
-	transition: all 0s;
+    left: "-100px";
+    transition: all 0s;
 }
 
 .menu2On {
-    transform: translate(-100px,0px);
-	transition: all 0.3s;
+    transform: translate(-100px, 0px);
+    transition: all 0.3s;
 }
 
 .menu2OFF {
-    left:"100px";
-	transition: all 0s;
+    left: "100px";
+    transition: all 0s;
+}
+
+.rotate360 {
+    transform: rotate(360deg);
+    transition: all 0.5s;
 }
