@@ -173,13 +173,14 @@ body {
     list-style: none;
 }
 .userInfoUl li{
-    border: solid red 1px;
+    /* border: solid red 1px; */
     width: 380px;
     margin-top: 10px;
 }
 .userInfoUl li b{
     font-size: 25px;
 }
+
 .userInfoUl li input{
     height: 28px;
     width: 200px;
@@ -187,17 +188,28 @@ body {
     position: relative;
     top: 0px;
     left: 5px;
+    background-color: rgba(240, 197, 214,0.5);
+    border: none;
 }
+
 .userInfoUl li:nth-child(2),
-.userInfoUl li:nth-child(3){
+.userInfoUl li:nth-child(3),
+.userInfoUl li:nth-child(5),
+.userInfoUl li:nth-child(6),
+.userInfoUl li:nth-child(7){
     position: relative;
+    left: 25px;
 }
 
+.userInfoUl li:nth-child(4){
+    position: relative;
+    left: -75px;
+}
 
-
-
-
-
+.userInfoUl li:nth-child(8){
+    position: relative;
+    left: 5px;
+}
 
 /* 昵称 */
 .nikeNameBox {

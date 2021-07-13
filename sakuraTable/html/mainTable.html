@@ -23,7 +23,7 @@
     <!-- 头像 -->
     <div class="headBigBox">
       <div class="headPictureBox">
-        <img src="headPictures/sakura.jpg" class="headPicture" />
+        <img class="headPicture" src="headPictures/sakura.jpg"/>
       </div>
       <!-- 头像鼠标划过弹出的框 -->
       <div class="bigHPBox" id="bigHPBox">
@@ -137,12 +137,16 @@
     }
   });
 
-  var headPicture = new Vue({
-    el: '.headPicture',
-    data: {
-      headPicture: 'headPictures/miku.png'
+import imgb from "headPictures/sakura.jpg";
+
+  export default{
+    data(){
+      var urls = require('headPictures/sakura.jpg');
+      return{
+        headPictureP: imgb
+      }
     }
-  });
+  }
 
 </script>
 

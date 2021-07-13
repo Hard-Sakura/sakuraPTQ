@@ -67,7 +67,7 @@ $(document).ready(function () {
         $(".infoBAC").hide();
         $(".bigHPPicture").stop().animate({ width: "100px" }, 1000, function () {
             $(".bigHPBox").stop().animate({ left: "19%" }, 200, function () {
-                $(".headBigBox").stop().animate({ top: "5%" }, 100, function () {
+                $(".headBigBox").stop().animate({ top: "3%" }, 100, function () {
                     $(".bigHPBox").hide();
                     $(".sakuraXZBox").show();
                 });
@@ -146,4 +146,9 @@ $(".sakuraXZ").click(function () {
             $(".menu2").stop().animate({ left: "100px" }, 0);
         });
     }
+});
+
+// 个人信息文本框点击无边框
+$(".userInfoUl li input").click(function () {
+    $(this).css({"border":"none"});
 });
