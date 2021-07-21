@@ -137,6 +137,7 @@ $(".sakuraXZ").click(function () {
             $(".menu2").addClass("menu2On");
             $(".menuTable").stop().animate({ opacity: 1 }, 300);
         });
+        $(".waifu").stop().animate({ left:"300px"}, 1000);
     } else {
         $(".sectionLeft").stop().animate({ left: "-300px" }, 1000, function () {
             $(".menu1").removeClass("menu1On");
@@ -145,6 +146,7 @@ $(".sakuraXZ").click(function () {
             $(".menu1").stop().animate({ left: "-100px" }, 0);
             $(".menu2").stop().animate({ left: "100px" }, 0);
         });
+        $(".waifu").stop().animate({ left:"0px"}, 1000);
     }
 });
 
