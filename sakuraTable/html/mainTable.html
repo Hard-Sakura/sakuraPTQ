@@ -9,60 +9,16 @@
 <style>
   /* @import url(mainTableCss.css); */
 </style>
-<style type="text/css">
-  .heart {
-    width: 10px;
-    height: 10px;
-    position: fixed;
-    background: #f00;
-    transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-  }
-  
-  .heart:after,
-  .heart:before {
-    content: '';
-    width: inherit;
-    height: inherit;
-    background: inherit;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    position: fixed;
-  }
-  
-  .heart:after {
-    top: -5px;
-  }
-  
-  .heart:before {
-    left: -5px;
-  }
-  
-  
-  .el-carousel__item h3 {
-    color: #475669;
-    font-size: 14px;
-    opacity: 0.75;
-    line-height: 150px;
-    margin: 0;
-  }
-  
-  .el-carousel__item:nth-child(2n) {
-    background-color: #99a9bf;
-  }
-  
-  .el-carousel__item:nth-child(2n+1) {
-    background-color: #d3dce6;
-  }
-</style>
 <link rel="stylesheet" type="text/css" href="css\mainTableLeftCss.css" />
 <link rel="stylesheet" type="text/css" href="css\sakuraSnowCss.css" />
 <link rel="stylesheet" type="text/css" href="assets/waifu.css" />
 
 
 <body class="allThings" id="allThings">
+  <!-- 爆炸特效 -->
+  <canvas class="fireworks"
+    style="position: fixed; left: 0px; top: 0px; z-index: 1; pointer-events: none; width: 1920px; height: 887px;"
+    width="3840" height="1774"></canvas>
 
   <!-- 背景  -->
   <div id="jsi-cherry-container" class="container"></div>
@@ -178,7 +134,7 @@
   </div>
 
   <!--live2d-->
-  <div class="waifu" style="z-index: 99999;">
+  <div class="waifu" id= "waifu" style="z-index: 99999;">
     <div class="waifu-tips"></div>
     <canvas id="live2d" width="470" height="440" class="live2d"></canvas>
     <div class="waifu-tool">
@@ -198,38 +154,6 @@
 <script type="text/javascript" src="js/sakuraSnowJs.js"></script>
 <script type="text/javascript" src="assets/waifu-tips.js"></script>
 <script type="text/javascript" src="assets/live2d.js"></script>
-<script type="text/javascript" src="js/textJs/anime.min.js"></script>
-<script type="text/javascript" src="js/textJs/anime.min2.js"></script>
-<script type="text/javascript">
-  var a_idx = 0;
-  jQuery(document).ready(function($) {
-    $("body").click(function(e) {
-      var a = new Array("ヾ(◍°∇°◍)ﾉﾞ", "٩(๑>◡<๑)۶ ", "ヾ(@^▽^@)ノ", "(｡◕ˇ∀ˇ◕)", "✧*｡٩(ˊᗜˋ*)و✧*｡", "(≧∀≦)♪", "φ(>ω<*) ", "┏(＾0＾)┛", "（づ￣3￣）づ╭❤～", "(๑′ᴗ‵๑)Ｉ Lᵒᵛᵉᵧₒᵤ❤", "^_^");
-      var $i = $("<span></span>").text(a[a_idx]);
-      a_idx = (a_idx + 1) % a.length;
-      var x = e.pageX,
-        y = e.pageY;
-      $i.css({
-        "z-index": 1000,
-        "top": y - 20,
-        "left": x,
-        "position": "absolute",
-        "font-weight": "bold",
-        "color": "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
-      });
-      $("body").append($i);
-      $i.animate({
-          "top": y - 180,
-          "opacity": 0
-        },
-        3500,
-        function() {
-          $i.remove();
-        });
-    });
-  });
-</script>
-  
 <script type="text/javascript">
   initModel("assets/")
 
@@ -255,4 +179,37 @@
   })
 </script>
 
+<!-- 点击特效 -->
+<script type="text/javascript" src="js/textJs/anime.min.js"></script>
+<script type="text/javascript" src="js/textJs/anime.min2.js"></script>
+<script type="text/javascript">
+  var a_idx = 0;
+  jQuery(document).ready(function ($) {
+    $("body").click(function (e) {
+      var a = new Array("ヾ(◍°∇°◍)ﾉﾞ", "٩(๑>◡<๑)۶ ", "ヾ(@^▽^@)ノ", "(｡◕ˇ∀ˇ◕)", 
+                        "✧*｡٩(ˊᗜˋ*)و✧*｡", "(≧∀≦)♪", "φ(>ω<*) ", "┏(＾0＾)┛", "（づ￣3￣）づ╭❤～", "(๑′ᴗ‵๑)Ｉ Lᵒᵛᵉᵧₒᵤ❤", "^_^");
+      var $i = $("<span></span>").text(a[a_idx]);
+      a_idx = (a_idx + 1) % a.length;
+      var x = e.pageX,
+        y = e.pageY;
+      $i.css({
+        "z-index": 1000,
+        "top": y - 20,
+        "left": x,
+        "position": "absolute",
+        "font-weight": "bold",
+        "color": "rgb(" + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + "," + ~~(255 * Math.random()) + ")"
+      });
+      $("body").append($i);
+      $i.animate({
+        "top": y - 180,
+        "opacity": 0
+      },
+        3500,
+        function () {
+          $i.remove();
+        });
+    });
+  });
+</script>
 </html>

@@ -124,8 +124,10 @@ function autodivheight() { //函数：获取尺寸  
 
     if (winHeight > 700) {
         document.getElementById("pliceText").style.display = 'block';
+        document.getElementById("waifu").style.display = 'block';
     } else {
         document.getElementById("pliceText").style.display = 'none';
+        document.getElementById("waifu").style.display = 'none';
     }
 }
 window.onresize = autodivheight;  //浏览器窗口发生变化时同时调用

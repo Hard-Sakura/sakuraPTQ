@@ -2,6 +2,7 @@
     z-index: 999;
     position:absolute;
     bottom  : -8px;
+    display: block;
 }
 .waifu:hover {
     -webkit-transform: translateY(0);
