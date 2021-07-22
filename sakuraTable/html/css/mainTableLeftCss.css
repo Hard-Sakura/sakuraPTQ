@@ -6,7 +6,7 @@
 body {
     border: solid red 0px;
     overflow: hidden;
-    cursor: url("headPictures\帮助选择.ani");
+    cursor: url("headPictures\caseHelper.ani");
 }
 
 /* 最左边菜单栏 */
