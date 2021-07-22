@@ -1,15 +1,15 @@
 $(document).ready(function () {
     //菜单特效
-    $(".menuTable ul li").on({
-        mouseover: function () {
-            //鼠标移入回调
-            $(this).stop().animate({ top: "5px", "font-size": "21px" }, 500);
-        },
-        mouseout: function () {
-            //鼠标移出回调
-            $(this).stop().animate({ top: "0px", "font-size": "16px" }, 200);
-        }
-    });
+    // $(".menuTable ul li").on({
+    //     mouseover: function () {
+    //         //鼠标移入回调
+    //         $(this).stop().animate({ top: "5px", "font-size": "21px" }, 500);
+    //     },
+    //     mouseout: function () {
+    //         //鼠标移出回调
+    //         $(this).stop().animate({ top: "0px", "font-size": "16px" }, 200);
+    //     }
+    // });
 
     //头像特效
     // $(".headBigBox").on({
@@ -96,14 +96,17 @@ $(document).ready(function () {
 function autodivheight() { //函数：获取尺寸   
     //获取浏览器窗口高度  
     var winHeight = 0;
-    if (window.innerHeight)
+    if (window.innerHeight){
         winHeight = window.innerHeight;
-    else if ((document.body) && (document.body.clientHeight))
+    }
+    else if ((document.body) && (document.body.clientHeight)){
         winHeight = document.body.clientHeight;
+    }
     //通过深入Document内部对body进行检测，获取浏览器窗口高度  
-    if (document.documentElement && document.documentElement.clientHeight)
+    if (document.documentElement && document.documentElement.clientHeight){
         winHeight = document.documentElement.clientHeight;
-    //DIV高度为浏览器窗口的高度  
+    }
+    //DIV高度为浏览器窗口的高度
     document.getElementById("tree").style.height = winHeight + "px";
 
     //  alert($("#tree").height() + ">"+winHeight);
