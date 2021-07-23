@@ -56,9 +56,6 @@
           <div class="saveUserInfo">
             <p>保存</p>
           </div>
-          <div class="hideBackGround">
-            <p>纯色背景</p>
-          </div>
           <div class="closeUp">
             <p>收起</p>
           </div>
@@ -107,6 +104,13 @@
             <p>关于我们</p>
           </div>
         </li>
+        <li>
+          <div>
+            <div class="picker" id="color-picker">
+              <p>背景颜色</p>
+            </div>
+          </div>
+        </li>
       </ul>
     </div>
     <!-- 预留文本框 -->
@@ -134,7 +138,7 @@
   </div>
 
   <!--live2d-->
-  <div class="waifu" id= "waifu" style="z-index: 99999;">
+  <div class="waifu" id="waifu" style="z-index: 99999;">
     <div class="waifu-tips"></div>
     <canvas id="live2d" width="470" height="440" class="live2d"></canvas>
     <div class="waifu-tool">
@@ -150,6 +154,7 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <script type="text/javascript" src="js/jc/jquery.min.js"></script>
+<script type="text/javascript" src="js/colorpicker/colorpicker.js"></script>
 <script type="text/javascript" src="js/mainTableLeftjs.js"></script>
 <script type="text/javascript" src="js/sakuraSnowJs.js"></script>
 <script type="text/javascript" src="assets/waifu-tips.js"></script>
@@ -178,6 +183,16 @@
     }
   })
 </script>
+<!-- 颜色选择 -->
+<script type="text/javascript">
+  var obj = document.getElementById("bigHPBox");
+  var a = Colorpicker.create({
+    el: "color-picker",
+    change: function (elem, hex) {
+      obj.style.backgroundColor = hex;
+    }
+  })
+</script>
 
 <!-- 点击特效 -->
 <script type="text/javascript" src="js/textJs/anime.min.js"></script>
@@ -186,8 +201,8 @@
   var a_idx = 0;
   jQuery(document).ready(function ($) {
     $("body").click(function (e) {
-      var a = new Array("ヾ(◍°∇°◍)ﾉﾞ", "٩(๑>◡<๑)۶ ", "ヾ(@^▽^@)ノ", "(｡◕ˇ∀ˇ◕)", 
-                        "✧*｡٩(ˊᗜˋ*)و✧*｡", "(≧∀≦)♪", "φ(>ω<*) ", "┏(＾0＾)┛", "（づ￣3￣）づ╭❤～", "(๑′ᴗ‵๑)Ｉ Lᵒᵛᵉᵧₒᵤ❤", "^_^");
+      var a = new Array("ヾ(◍°∇°◍)ﾉﾞ", "٩(๑>◡<๑)۶ ", "ヾ(@^▽^@)ノ", "(｡◕ˇ∀ˇ◕)",
+        "✧*｡٩(ˊᗜˋ*)و✧*｡", "(≧∀≦)♪", "φ(>ω<*) ", "┏(＾0＾)┛", "（づ￣3￣）づ╭❤～", "(๑′ᴗ‵๑)Ｉ Lᵒᵛᵉᵧₒᵤ❤", "^_^");
       var $i = $("<span></span>").text(a[a_idx]);
       a_idx = (a_idx + 1) % a.length;
       var x = e.pageX,
@@ -212,4 +227,5 @@
     });
   });
 </script>
+
 </html>

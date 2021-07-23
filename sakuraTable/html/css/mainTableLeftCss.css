@@ -6,7 +6,6 @@
 body {
     border: solid red 0px;
     overflow: hidden;
-    cursor: url("headPictures\caseHelper.ani");
 }
 
 /* 最左边菜单栏 */
@@ -77,7 +76,7 @@ body {
     top: 0px;
     left: 0px;
     z-index: -1;
-    /* display: none; */
+    /* display: none;*/
 }
 
 /* 上面的用户信息 */
@@ -87,7 +86,7 @@ body {
 
 /* 下面几个的hover事件 */
 .saveUserInfo:hover,
-.hideBackGround:hover,
+.picker:hover,
 .closeUp:hover {
     background-color: rgb(214, 135, 165);
 }
@@ -113,33 +112,12 @@ body {
     z-index: 3;
 }
 
-/* 背景调整 */
-.hideBackGround {
-    z-index: 1;
-    position: relative;
-    top: 685px;
-    left: 800px;
-    width: 120px;
-    height: 45px;
-    border: solid rgb(240, 197, 214) 0px;
-    background-color: rgb(240, 197, 214);
-    border-radius: 20%;
-}
-
-.hideBackGround p {
-    position: relative;
-    top: 22%;
-    left: 27%;
-    color: #ff90cd;
-    z-index: 3;
-}
-
 /* 收起 */
 .closeUp {
     z-index: 1;
     position: relative;
-    top: 640px;
-    left: 680px;
+    top: 685px;
+    left: 830px;
     width: 90px;
     height: 45px;
     border: solid rgb(240, 197, 214) 0px;
